@@ -1,28 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        Cart firstShoppersCart = new Cart();
-        Product pairOfSneakers = new Product(10);
+        // Create a new cart
+        Cart cart = new Cart();
+
+        // Define products with different prices
+        Product sneakers = new Product(10);
+        Product tShirt = new Product(20);
+        Product eBook = new Product(5);
+
+        // Add products to cart and handle exceptions if any
         try {
-            firstShoppersCart.addProduct( pairOfSneakers );
+            cart.addProduct(sneakers);
+            cart.addProduct(tShirt);
+            cart.addProduct(eBook);
+
+            // Try to add a product with invalid price to test exception handling
+            Product faultyProduct = new Product(0);
+            cart.addProduct(faultyProduct);
         } catch (Exception e) {
-            System.out.println("An exception happened while adding a product to the cart");
+            System.out.println("Error adding product: " + e.getMessage());
         }
-        System.out.println( firstShoppersCart.getTotal() );
 
-
-        // exception handling
-        // cart
-        // add product
-            // exception handling
-        // get total price
-            // ex handling
-        // get cart content
-            // all good
-
-
-        // inheritance
-        // product - price
-            // -> physical
-            // -> virtual (online course)
+        // Display the total price of all products in the cart
+        System.out.println("Total Cart Price: $" + cart.getTotal());
     }
 }
