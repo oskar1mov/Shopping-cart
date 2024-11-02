@@ -1,15 +1,11 @@
 public class Main {
     public static void main(String[] args) {
-
         Cart firstShoppersCart = new Cart();
-
-
-        Product sneakers = new Product(10);
-
+        Product pairOfSneakers = new Product(10);
         try {
-            firstShoppersCart.addProduct( sneakers );
+            firstShoppersCart.addProduct( pairOfSneakers );
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("An exception happened while adding a product to the cart");
         }
         System.out.println( firstShoppersCart.getTotal() );
 
