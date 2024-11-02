@@ -1,14 +1,21 @@
-public class Cart {
-    private Product product;
+import java.util.ArrayList;
+import java.util.List;
 
-    public void addProduct( Product product ) throws Exception {
+public class Cart {
+    private final List<Product> products = new ArrayList<>();
+
+    public void addProduct(Product product) throws Exception {
         if ( product.getPrice() <= 0 ) {
-            throw new Exception( "Product price should be more than 0" );
+            throw new Exception("Product price should be greater than 0");
         }
-//        this.product = product;
+        this.products.add(product);
     }
 
     public double getTotal() {
-        return this.product.getPrice();
+        double total = 0;
+        for (Product product : products) {
+            total += product.getPrice();
+        }
+        return total;
     }
 }
