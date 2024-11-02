@@ -9,7 +9,7 @@ public class Main {
         try {
             firstShoppersCart.addProduct( sneakers );
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("send me location");
         }
         System.out.println( firstShoppersCart.getTotal() );
 
