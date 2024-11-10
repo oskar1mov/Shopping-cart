@@ -4,15 +4,12 @@ public class Main {
         Cart firstShoppersCart = new Cart();
 
 
-        Product sneakers = new Product(10);
-
-        try {
-            firstShoppersCart.addProduct( sneakers );
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        System.out.println( firstShoppersCart.getTotal() );
-
+//        try {
+//            firstShoppersCart.addProduct( sneakers );
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//        }
+//        System.out.println( firstShoppersCart.getTotal() );
 
         // exception handling
         // cart
@@ -27,6 +24,6 @@ public class Main {
         // inheritance
         // product - price
             // -> physical
-            // -> virtual (online course)
+        //            // -> virtual (online course)
     }
 }
