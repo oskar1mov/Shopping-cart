@@ -27,11 +27,16 @@ public class Cart {
         }
     }
 
+    public double calculateTotalPrice() {
+        double totalPrice = 0.0;
+        for (Product product : items) {
+            totalPrice += product.getPrice();
+        }
+        return totalPrice;
+    }
+
     // TODO impl removeProduct
     // TODO cleanup Main and set things up properly
     // TODO bonus: test coverage for Cart
 
-    public double getTotal() {
-        return this.product.getPrice();
-    }
 }

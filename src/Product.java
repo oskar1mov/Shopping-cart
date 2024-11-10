@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class Product {
+public abstract class Product {
     private String productName;
     private double price;
 
@@ -27,4 +27,7 @@ public class Product {
     public String toString(){
         return "Product: " + productName + ", Price: $" + price;
     }
+
+    public abstract void displayInfo();
+
 }
